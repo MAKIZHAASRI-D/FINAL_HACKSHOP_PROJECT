@@ -5,7 +5,7 @@ from streamlit.components.v1 import html
 st.set_page_config(page_title=None,page_icon=None,layout='wide')
 
 with st.container():
-    col1,col2=st.columns(1,2)
+    col1,col2=st.columns(2)
     with col1:
 
         with st.container():
@@ -85,14 +85,13 @@ with st.container():
 
 
         if selected=="CONTACT ME":
-            contact_form="""<form action="https://formsubmit.co/your@email.com" method="POST">
+            contact_form="""<form action="https://formsubmit.co/makiduraijmp@gmail.com" method="POST">
             <input type="hidden" name="_captcha" value="false"><br>
             <label id="name" >enter your name:</label><br>
             <input type="text" name="name" placeholder="your name"  required><br>
-            <label id="email" >enter your name:</label><br>
+            <label id="email" >enter your email:</label><br>
             <input type="email" name="email" placeholder="your gmail" required><br>
-            <label id="message" >enter your name:</label><br>
-            <textarea name="message" placeholder="email me here" required><br>
+            <textarea name="message" placeholder="email me here" required></textarea><br>
             <button type="submit">Send</button><br>
             </form>"""
-            html(contact_form)
+            html(contact_form,height=1000,width=700)
