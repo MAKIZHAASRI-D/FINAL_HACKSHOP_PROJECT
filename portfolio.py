@@ -2,22 +2,22 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from streamlit.components.v1 import html
 
-st.set_page_config(page_title=None,page_icon=None,layout='wide')
+st.set_page_config(page_title=None,page_icon=None,layout='centered')
 
 with st.container():
-    col1,col2=st.columns(2)
-    with col1:
+
 
         with st.container():
             selected=option_menu(
                 menu_title=None,
                 options=['ABOUT ME','MY WORK','CONTACT ME'],
                 icons=['code-slash','person'],
-                orientation='vertical',
+                orientation='horizontal',
              )
             
-    with col2:
+
         if selected=='ABOUT ME':
+            st.title("ABOUT ME")
             about_me = f"""
 <!DOCTYPE html>
 <html lang="en">
@@ -51,6 +51,7 @@ with st.container():
             html(about_me,height=500,width=700)
         
         if selected=="MY WORK":
+            st.title("MY WORK")
             my_work= f"""
 <!DOCTYPE html>
 <html lang="en">
@@ -85,13 +86,14 @@ with st.container():
 
 
         if selected=="CONTACT ME":
+            st.title("BE IN TOUCH")
             contact_form="""<form action="https://formsubmit.co/makiduraijmp@gmail.com" method="POST">
-            <input type="hidden" name="_captcha" value="false"><br>
-            <label id="name" >enter your name:</label><br>
-            <input type="text" name="name" placeholder="your name"  required><br>
-            <label id="email" >enter your email:</label><br>
-            <input type="email" name="email" placeholder="your gmail" required><br>
-            <textarea name="message" placeholder="email me here" required></textarea><br>
-            <button type="submit">Send</button><br>
+            <input type="hidden" name="_captcha" value="false"><br><br>
+            <label id="name" >enter your name:</label><br><br>
+            <input type="text" name="name" placeholder="your name"  required><br><br>
+            <label id="email" >enter your email:</label><br><br>
+            <input type="email" name="email" placeholder="your gmail" required><br><br>
+            <textarea name="message" placeholder="email me here" required></textarea><br><br>
+            <button type="submit">Send</button><br><br>
             </form>"""
             html(contact_form,height=1000,width=700)
