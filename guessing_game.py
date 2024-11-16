@@ -47,24 +47,23 @@ if selected=="INTIUITION ZONE(USER GUESSING)":
     )
     if selected=="instructions":
         with st.container():
-            col1,col2=st.columns(2)
-            with col1:
+            
+            
                 st.header(""" INSTRUCTIONS""")
                 st.write("##")
-                st.subheader("""to be continued""")
-            with col2:
-                def load_lottieurl(url):
-                    r = requests.get(url)
-                    if r.status_code != 200:
-                        return None
-                    return r.content
-                lottie_brain=load_lottieurl("https://lottie.host/9f06bd72-c811-4056-8f2a-a20f12213bb4/wTE3OoVPJE.lottie")
+                st.write("""
+                    1. The computer has randomly selected a number within your specified range.
+                    2. Your task is to guess this number.
+                    3. You will receive feedback on whether your guess is too high or too low.
+                    4. Try to guess the number within the maximum attempts you set!
+        """)
+            
     
 
     if selected=="user details":
         with st.container():
-            col1,col2=st.columns(2)
-            with col1:
+            
+            
                 st.header("USER DETAILS")
                 name=st.text_input("YOUR NAME:",key="name")
                 email=st.text_input("YOUR EMAIL:",key="email")  
@@ -75,14 +74,7 @@ if selected=="INTIUITION ZONE(USER GUESSING)":
                     else:
                         st.success(f"YOU ARE LOGGED IN SUCCESSFULLY")
                         
-            with col2:
-                
-                def load_lottieurl(url:str):
-                    r=requests.get(url)
-                    if r.status_code !=200:
-                        return None
-                    return r.json
-                lottie_brain=load_lottieurl("https://lottie.host/2d617fa0-bee0-4843-87cb-03952fa706e1/gMncSEUZB6.json")
+            
     
     
     if selected=="game":
@@ -136,24 +128,21 @@ if selected=="CYBERNECTIC REIGN(COMPUTER GUESSING)":
     )
     if selected=="instructions":
         with st.container():
-            col1,col2=st.columns(2)
-            with col1:
+            
                 st.header(""" INSTRUCTIONS""")
                 st.write("##")
-                st.subheader("""to be continued""")
-            with col2:
-                def load_lottieurl(url:str):
-                    r=requests.get(url)
-                    if r.status_code !=200:
-                        return None
-                    return r.json
-                lottie_brain=load_lottieurl("https://lottie.host/embed/71ea6e35-e13c-4827-8e90-b8c1d17c49fc/OAelvNDW5s.json")
-    
+                st.write("""
+                    1. Think of a number within the range you specify.
+                    2. The machine will attempt to guess your number using a binary search strategy.
+                    3. You will provide feedback on whether the guess is too low, too high, or correct to the computer.
+                    4. The machine will aim to guess your number in the fewest attempts possible!
+        """)
+           
+                
 
     if selected=="user details":
         with st.container():
-            col1,col2=st.columns(2)
-            with col1:
+           
                 st.header("USER DETAILS")
                 name=st.text_input("YOUR NAME:",key="name2")
                 email=st.text_input("YOUR EMAIL:",key="email2")  
@@ -165,14 +154,7 @@ if selected=="CYBERNECTIC REIGN(COMPUTER GUESSING)":
                     else:
                         st.success(f"YOU ARE LOGGED IN SUCCESSFULLY")
                         
-            with col2:
-                
-                def load_lottieurl(url:str):
-                    r=requests.get(url)
-                    if r.status_code !=200:
-                        return None
-                    return r.json
-                lottie_brain=load_lottieurl("https://lottie.host/embed/b7a72d78-162a-4ee2-ab17-f47cc368eab7/ZbFXr6cuPR.json")
+            
     
     
     if selected=="game":
